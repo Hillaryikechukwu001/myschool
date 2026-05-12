@@ -1,0 +1,28 @@
+*{
+    background-color: rgb(234, 205, 205);
+}
+
+.container{
+  width: 90%;
+  max-width: 1200px;
+  min-height: 300px;
+  margin: 0 auto;
+  border: 2px solid #000;
+}
+
+.section1{
+    border: 30px black;
+    height: 80%;
+    width: 100%;
+
+
+}
+.section1_A{
+    height: 20%;
+    width: 100%;
+    border-radius: 2px rgb(142, 30, 30);
+
+
+}
+
+

@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESUT - Computer Science Department</title>
+    <link rel="stylesheet" href="Esut_project.css">
+</head>
+<body>
+    <!-- Main Container -->
+    <div class="container">
+        
+        <!-- Left Sidebar -->
+        <aside class="sidebar-left">
+            <div class="logo-section">
+                <h2 class="logo">ESUT</h2>
+                <p class="department">Computer Science</p>
+            </div>
+            
+            <nav class="nav-menu">
+                <a href="#" class="nav-item active" data-page="home">
+                    <span class="icon">🏠</span>
+                    <span class="nav-text">Home</span>
+                </a>
+                <a href="#" class="nav-item" data-page="results">
+                    <span class="icon">📊</span>
+                    <span class="nav-text">Results</span>
+                </a>
+                <a href="#" class="nav-item" data-page="marketing">
+                    <span class="icon">🛒</span>
+                    <span class="nav-text">Marketing Forum</span>
+                </a>
+                <a href="#" class="nav-item" data-page="textbooks">
+                    <span class="icon">📚</span>
+                    <span class="nav-text">Textbook Exchange</span>
+                </a>
+                <a href="#" class="nav-item" data-page="notifications">
+                    <span class="icon">🔔</span>
+                    <span class="nav-text">Notifications</span>
+                </a>
+                <a href="#" class="nav-item" data-page="profile">
+                    <span class="icon">👤</span>
+                    <span class="nav-text">Profile</span>
+                </a>
+            </nav>
+
+            <button class="post-btn">Post Announcement</button>
+        </aside>
+
+        <!-- Main Feed Container -->
+        <div class="main-content">
+            
+        <!-- Home Page (Announcements) -->
+        <main class="main-feed page-content active" id="home-page">
+            <header class="feed-header">
+                <h1>Announcements</h1>
+            </header>
+
+            <!-- Post Composer (For Lecturers Only) -->
+            <div class="post-composer" id="postComposer">
+                <div class="composer-header">
+                    <div class="user-avatar">L</div>
+                    <textarea placeholder="What's the announcement?" class="composer-input"></textarea>
+                </div>
+                <div class="composer-footer">
+                    <div class="composer-actions">
+                        <button class="action-btn">📎</button>
+                        <button class="action-btn">📷</button>
+                        <button class="action-btn">📊</button>
+                    </div>
+                    <button class="submit-btn">Post</button>
+                </div>
+            </div>
+
+            <!-- Sample Posts -->
+            <article class="post">
+                <div class="post-avatar">
+                    <div class="avatar">DR</div>
+                </div>
+                <div class="post-content">
+                    <div class="post-header">
+                        <span class="post-author">Dr. Okonkwo</span>
+                        <span class="post-role">Senior Lecturer</span>
+                        <span class="post-time">· 2h</span>
+                    </div>
+                    <div class="post-body">
+                        <p>Reminder: CSC 401 (Artificial Intelligence) class has been rescheduled to Thursday, 10:00 AM in LT5. Please ensure you've completed the prerequisite reading on Neural Networks.</p>
+                    </div>
+                    <div class="post-meta">
+                        <span class="meta-item">📌 100L - 400L</span>
+                        <span class="meta-item">🏷️ Announcement</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="post">
+                <div class="post-avatar">
+                    <div class="avatar">PR</div>
+                </div>
+                <div class="post-content">
+                    <div class="post-header">
+                        <span class="post-author">Prof. Nwankwo</span>
+                        <span class="post-role">HOD</span>
+                        <span class="post-time">· 5h</span>
+                    </div>
+                    <div class="post-body">
+                        <p>Attention all students: The departmental seminar on "Blockchain Technology and Its Applications" will hold on Friday, February 14th at the Main Auditorium. Guest speaker: Eng. Chukwuma from Microsoft Nigeria. Attendance is mandatory.</p>
+                    </div>
+                    <div class="post-meta">
+                        <span class="meta-item">📌 All Levels</span>
+                        <span class="meta-item">🏷️ Event</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="post">
+                <div class="post-avatar">
+                    <div class="avatar">MR</div>
+                </div>
+                <div class="post-content">
+                    <div class="post-header">
+                        <span class="post-author">Mr. Eze</span>
+                        <span class="post-role">Lecturer II</span>
+                        <span class="post-time">· 1d</span>
+                    </div>
+                    <div class="post-body">
+                        <p>CSC 201 students: Your assignment on Data Structures is due next Monday. Submit via the department portal. Late submissions will not be accepted.</p>
+                    </div>
+                    <div class="post-meta">
+                        <span class="meta-item">📌 200L</span>
+                        <span class="meta-item">🏷️ Assignment</span>
+                    </div>
+                </div>
+            </article>
+
+        </main>
+
+        <!-- Results Page -->
+        <main class="main-feed page-content" id="results-page">
+            <header class="feed-header">
+                <h1>Examination Results</h1>
+            </header>
+
+            <div class="results-filter">
+                <select class="filter-select" id="semesterFilter">
+                    <option value="">Select Semester</option>
+                    <option value="2024-2025-1">2024/2025 - First Semester</option>
+                    <option value="2024-2025-2">2024/2025 - Second Semester</option>
+                    <option value="2023-2024-2">2023/2024 - Second Semester</option>
+                    <option value="2023-2024-1">2023/2024 - First Semester</option>
+                </select>
+                <select class="filter-select" id="levelFilter">
+                    <option value="">Select Level</option>
+                    <option value="100l">100 Level</option>
+                    <option value="200l">200 Level</option>
+                    <option value="300l">300 Level</option>
+                    <option value="400l">400 Level</option>
+                </select>
+            </div>
+
+            <!-- Results Announcements -->
+            <article class="post result-post">
+                <div class="post-avatar">
+                    <div class="avatar">📊</div>
+                </div>
+                <div class="post-content">
+                    <div class="post-header">
+                        <span class="post-author">Exam & Records Office</span>
+                        <span class="post-role">Official</span>
+                        <span class="post-time">· 3d</span>
+                    </div>
+                    <div class="post-body">
+                        <p><strong>400 Level Results - 2024/2025 First Semester</strong></p>
+                        <p>Results for CSC 401, CSC 402, CSC 403, and CSC 404 are now available. Students can check their results on the student portal.</p>
+                        <a href="#" class="result-link">View Results Portal →</a>
+                    </div>
+                    <div class="post-meta">
+                        <span class="meta-item">📌 400L</span>
+                        <span class="meta-item">🏷️ Results</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="post result-post">
+                <div class="post-avatar">
+                    <div class="avatar">📊</div>
+                </div>
+                <div class="post-content">
+                    <div class="post-header">
+                        <span class="post-author">Exam & Records Office</span>
+                        <span class="post-role">Official</span>
+                        <span class="post-time">· 1w</span>
+                    </div>
+                    <div class="post-body">
+                        <p><strong>200 Level Results - 2024/2025 First Semester</strong></p>
+                        <p>First semester examination results for 200 Level students are being processed. Expected release date: February 15, 2026.</p>
+                    </div>
+                    <div class="post-meta">
+                        <span class="meta-item">📌 200L</span>
+                        <span class="meta-item">🏷️ Results</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="post result-post">
+                <div class="post-avatar">
+                    <div class="avatar">⚠️</div>
+                </div>
+                <div class="post-content">
+                    <div class="post-header">
+                        <span class="post-author">Prof. Nwankwo</span>
+                        <span class="post-role">HOD</span>
+                        <span class="post-time">· 2w</span>
+                    </div>
+                    <div class="post-body">
+                        <p><strong>Result Query Period</strong></p>
+                        <p>Students who wish to query their 300L results from last semester should submit their applications to the departmental office before February 20, 2026.</p>
+                    </div>
+                    <div class="post-meta">
+                        <span class="meta-item">📌 300L</span>
+                        <span class="meta-item">🏷️ Notice</span>
+                    </div>
+                </div>
+            </article>
+
+        </main>
+
+        <!-- Marketing Forum Page -->
+        <main class="main-feed page-content" id="marketing-page">
+            <header class="feed-header">
+                <h1>Marketing Forum</h1>
+            </header>
+
+            <!-- Student Post Composer -->
+            <div class="post-composer">
+                <div class="composer-header">
+                    <div class="user-avatar">S</div>
+                    <textarea placeholder="What are you selling or promoting?" class="composer-input"></textarea>
+                </div>
+                <div class="composer-footer">
+                    <div class="composer-actions">
+                        <button class="action-btn">📎</button>
+                        <button class="action-btn">📷</button>
+                        <button class="action-btn">💰</button>
+                    </div>
+                    <button class="submit-btn">Post</button>
+                </div>
+            </div>
+
+            <!-- Marketing Posts -->
+            <article class="post marketing-post">
+                <div class="post-avatar">
+                    <div class="avatar" style="background-color: #2563eb;">CH</div>
+                </div>
+                <div class="post-content">
+                    <div class="post-header">
+                        <span class="post-author">Chidera Okeke</span>
+                        <span class="post-role">300L Student</span>
+                        <span class="post-time">· 4h</span>
+                    </div>
+                    <div class="post-body">
+                        <p>🖥️ <strong>Laptop Repair & Upgrade Services</strong></p>
+                        <p>Professional laptop repair, RAM upgrades, SSD installations, and software fixes. Fast service, affordable prices. Contact: 0803-XXX-XXXX</p>
+                    </div>
+                    <div class="post-meta">
+                        <span class="meta-item">💼 Service</span>
+                        <span class="meta-item">💬 5 Comments</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="post marketing-post">
+                <div class="post-avatar">
+                    <div class="avatar" style="background-color: #059669;">AD</div>
+                </div>
+                <div class="post-content">
+                    <div class="post-header">
+                        <span class="post-author">Adaeze Nnamdi</span>
+                        <span class="post-role">200L Student</span>
+                        <span class="post-time">· 1d</span>
+                    </div>
+                    <div class="post-body">
+                        <p>👗 <strong>Custom Clothing & Fashion Design</strong></p>
+                        <p>Get your custom outfits for events, parties, and everyday wear. Quality fabrics, great prices! DM for designs and pricing.</p>
+                    </div>
+                    <div class="post-meta">
+                        <span class="meta-item">🛍️ Product</span>
+                        <span class="meta-item">💬 12 Comments</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="post marketing-post">
+                <div class="post-avatar">
+                    <div class="avatar" style="background-color: #dc2626;">EM</div>
+                </div>
+                <div class="post-content">
+                    <div class="post-header">
+                        <span class="post-author">Emmanuel Obi</span>
+                        <span class="post-role">400L Student</span>
+                        <span class="post-time">· 2d</span>
+                    </div>
+                    <div class="post-body">
+                        <p>📱 <strong>Phone Accessories & Gadgets</strong></p>
+                        <p>Selling phone cases, screen protectors, chargers, power banks, and earphones. All original products. Visit my stand at the CS Dept building.</p>
+                    </div>
+                    <div class="post-meta">
+                        <span class="meta-item">🛍️ Product</span>
+                        <span class="meta-item">💬 8 Comments</span>
+                    </div>
+                </div>
+            </article>
+
+        </main>
+
+        <!-- Textbook Exchange Page -->
+        <main class="main-feed page-content" id="textbooks-page">
+            <header class="feed-header">
+                <h1>Textbook Exchange</h1>
+            </header>
+
+            <!-- Textbook Post Composer -->
+            <div class="post-composer">
+                <div class="composer-header">
+                    <div class="user-avatar">S</div>
+                    <textarea placeholder="Selling or looking for a textbook?" class="composer-input"></textarea>
+                </div>
+                <div class="composer-footer">
+                    <div class="composer-actions">
+                        <button class="action-btn">📎</button>
+                        <button class="action-btn">📷</button>
+                        <button class="action-btn">📖</button>
+                    </div>
+                    <button class="submit-btn">Post</button>
+                </div>
+            </div>
+
+            <!-- Textbook Posts -->
+            <article class="post textbook-post">
+                <div class="post-avatar">
+                    <div class="avatar" style="background-color: #7c3aed;">IF</div>
+                </div>
+                <div class="post-content">
+                    <div class="post-header">
+                        <span class="post-author">Ifeanyi Okafor</span>
+                        <span class="post-role">300L Student</span>
+                        <span class="post-time">· 6h</span>
+                    </div>
+                    <div class="post-body">
+                        <p>📚 <strong>SELLING: Operating Systems Concepts (9th Edition)</strong></p>
+                        <p>by Silberschatz, Galvin & Gagne. Used for CSC 301. Good condition, no highlighting. ₦8,000 (negotiable)</p>
+                        <p>Contact: 0901-XXX-XXXX</p>
+                    </div>
+                    <div class="post-meta">
+                        <span class="meta-item">💰 For Sale</span>
+                        <span class="meta-item">📌 300L</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="post textbook-post">
+                <div class="post-avatar">
+                    <div class="avatar" style="background-color: #ea580c;">UC</div>
+                </div>
+                <div class="post-content">
+                    <div class="post-header">
+                        <span class="post-author">Uchenna Mbah</span>
+                        <span class="post-role">200L Student</span>
+                        <span class="post-time">· 12h</span>
+                    </div>
+                    <div class="post-body">
+                        <p>🔍 <strong>LOOKING FOR: Data Structures and Algorithms in Java</strong></p>
+                        <p>Need this book for CSC 201. Willing to buy used copy in good condition. Budget: ₦6,000 - ₦10,000</p>
+                    </div>
+                    <div class="post-meta">
+                        <span class="meta-item">🔎 Wanted</span>
+                        <span class="meta-item">📌 200L</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="post textbook-post">
+                <div class="post-avatar">
+                    <div class="avatar" style="background-color: #0891b2;">NG</div>
+                </div>
+                <div class="post-content">
+                    <div class="post-header">
+                        <span class="post-author">Ngozi Eze</span>
+                        <span class="post-role">400L Student</span>
+                        <span class="post-time">· 1d</span>
+                    </div>
+                    <div class="post-body">
+                        <p>📚 <strong>SELLING: Full 400L Course Material Package</strong></p>
+                        <p>Includes: Artificial Intelligence (Russell & Norvig), Computer Graphics, Software Engineering, and Project Management books. All in excellent condition. ₦25,000 for all.</p>
+                        <p>WhatsApp: 0812-XXX-XXXX</p>
+                    </div>
+                    <div class="post-meta">
+                        <span class="meta-item">💰 For Sale</span>
+                        <span class="meta-item">📌 400L</span>
+                        <span class="meta-item">📦 Bundle</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="post textbook-post">
+                <div class="post-avatar">
+                    <div class="avatar">DR</div>
+                </div>
+                <div class="post-content">
+                    <div class="post-header">
+                        <span class="post-author">Dr. Okonkwo</span>
+                        <span class="post-role">Senior Lecturer</span>
+                        <span class="post-time">· 3d</span>
+                    </div>
+                    <div class="post-body">
+                        <p>📖 <strong>Recommended Textbooks for CSC 401 (AI)</strong></p>
+                        <p>Required: "Artificial Intelligence: A Modern Approach" by Russell & Norvig (4th Edition)</p>
+                        <p>Optional: "Deep Learning" by Goodfellow, Bengio & Courville (available as free PDF online)</p>
+                    </div>
+                    <div class="post-meta">
+                        <span class="meta-item">📌 400L</span>
+                        <span class="meta-item">🏷️ Recommendation</span>
+                    </div>
+                </div>
+            </article>
+
+        </main>
+
+        </div>
+
+        <!-- Right Sidebar -->
+        <aside class="sidebar-right">
+            <!-- Level Filter -->
+            <div class="widget">
+                <h3 class="widget-title">Filter by Level</h3>
+                <div class="level-filters">
+                    <button class="level-btn active" data-level="all">All Levels</button>
+                    <button class="level-btn" data-level="100l">100L</button>
+                    <button class="level-btn" data-level="200l">200L</button>
+                    <button class="level-btn" data-level="300l">300L</button>
+                    <button class="level-btn" data-level="400l">400L</button>
+                </div>
+            </div>
+
+            <!-- Management Board -->
+            <div class="widget">
+                <h3 class="widget-title">Management Board</h3>
+                <div class="board-members">
+                    <div class="board-member">
+                        <div class="member-avatar">HOD</div>
+                        <div class="member-info">
+                            <div class="member-name">Prof. Nwankwo</div>
+                            <div class="member-role">Head of Department</div>
+                        </div>
+                    </div>
+                    <div class="board-member">
+                        <div class="member-avatar">SL</div>
+                        <div class="member-info">
+                            <div class="member-name">Dr. Okafor</div>
+                            <div class="member-role">Senior Lecturer</div>
+                        </div>
+                    </div>
+                    <div class="board-member">
+                        <div class="member-avatar">SL</div>
+                        <div class="member-info">
+                            <div class="member-name">Dr. Ugwu</div>
+                            <div class="member-role">Senior Lecturer</div>
+                        </div>
+                    </div>
+                    <div class="board-member">
+                        <div class="member-avatar">SP</div>
+                        <div class="member-info">
+                            <div class="member-name">Chidera Okeke</div>
+                            <div class="member-role">Student President</div>
+                        </div>
+                    </div>
+                </div>
+                <button class="view-all-btn">View Decision Room</button>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="widget">
+                <h3 class="widget-title">Quick Links</h3>
+                <div class="quick-links">
+                    <a href="#" class="quick-link">📄 Course Materials</a>
+                    <a href="#" class="quick-link">📅 Academic Calendar</a>
+                    <a href="#" class="quick-link">💬 Student Forum</a>
+                    <a href="#" class="quick-link">ℹ️ Help & Support</a>
+                </div>
+            </div>
+
+            <!-- Lecturer Login -->
+            <div class="widget">
+                <h3 class="widget-title">Lecturer Portal</h3>
+                <button class="lecturer-login-btn">Sign In</button>
+            </div>
+        </aside>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+.body{
+    background-color: black;
+}
+
+
+.main_css{
+    background-color: crimson;
+    height: 50%;
+    width: 100px;
+}
+
+.sub_div{
+    height: 50%;
+    width: 100px;
+    background-color: blueviolet;
+    border-radius: 6px;
+}
+.h4{
+    font-size: 400px    
+}

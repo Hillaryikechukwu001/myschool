@@ -1,0 +1,461 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.home-container{
+    height: 100vh;
+    opacity: 1;
+    padding: 4px 2px;
+    background-image: url(page.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgb(208, 199, 199);
+
+}
+.nav-container{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    width: 100%;
+}
+
+.link-container{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.logo-test{
+    font-family: Georgia, 'Times New Roman', Times;
+    font-size: 25px;
+    font-style: italic;
+    color: rgb(204, 232, 232);
+
+}
+
+.link-items_container{
+    border:2px solid white;
+    border-radius: 20px;
+    display: flex;
+    gap: 50px;
+    padding: 10px;
+}
+
+.link-items_container, div{
+    color: black;
+}
+.img-container{
+    justify-content: end;
+    display: flex;
+}
+
+.img{
+    width: 40px;
+}
+
+.home-text_container{
+    width: 100%;
+    height: 500px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.text-sub_container{
+    width: 80%;
+    height: 400px;
+}
+
+.text-column_container{
+    margin: 10px 0px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.text-first_column{
+    background-color: rgb(170, 159, 159);
+    border-radius: 40px;
+    padding: 10px 20px;
+
+}
+
+.text-sub_container-ii{
+    width: 410px;
+    padding: 5px;
+    height: 200px;
+    overflow: hidden;
+
+
+}
+.text-second_column{
+    font-size: 3.3rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+.text-btn{
+    padding: 10px 20px;
+    font-size: 24px;
+    border-radius: 20px;
+    border: none;
+}
+
+.lorem-container{
+
+    justify-content: space-between;
+    width: 50rem;
+    display:flex;
+    padding: 30px;
+    gap: 45px;
+
+}
+
+.lorem{
+    font-size: 15px;
+    border: 3px;
+    border-radius: 30px;
+
+}
+
+.lorem-ii{
+    font-size:15px ;
+    border: 3px;
+    border-radius: 30px;
+}
+/* container section */
+
+.section-container{
+    width: 100%;
+    height: 500px;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*background-color:rgb(208, 196, 196);
+    background-color:rgb(243, 246, 246);*/
+
+}
+
+.major-container{
+    width: 80%;
+    height:300px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.container-i{
+    width: 25%;
+    height: 100%;
+    display: flex;
+    border-radius: 10px;
+    background-image: url(Nigeria.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.container-ii{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    
+
+
+}
+
+.first-container_ii{
+    width: 100%;
+    height: 50%;
+    flex-direction: row;
+    display: flex;
+    position: relative;
+    gap: 20px;
+
+
+}
+
+.second-container_ii{
+    width: 100%;
+    height: 50%;
+    border-radius: 10px;
+    background-image: url(burkinafaso.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+
+}
+
+
+
+.first-container_child{
+    width: 50%;
+    height: 100%;
+    border-radius: 10px;
+    background-image: url(Ghana.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+
+}
+
+.second-container_child2{
+    width: 50%;
+    height: 100%;
+    position: relative;
+    border-radius: 10px;
+    background-image: url(Kenya.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+
+}
+
+.text-design1{
+    position: relative;
+
+}
+
+.text-design1_container{
+    position: absolute;
+    color: white;
+    bottom: 0
+
+}
+
+.container-ii_2{
+    background-image: url(Nigeria.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+
+}
+
+.first-container_text{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    color: white;
+
+}
+
+.text-design3{
+    position: relative;
+    bottom: 0px;
+    left: 0px;
+}
+
+.text-design1_container3{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+
+}
+
+.section-3{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    background-image: url(subpics.jpg);
+    background-position: center;
+    background-repeat:no-repeat;
+    background-size: cover;
+
+}
+
+.section-3_container{
+    width: 70%;
+    height: 90%;
+    margin: 40px;
+    display: flex;
+    gap: 20px;
+
+}
+
+.section-3_i{
+    width: 50%;
+    height: 90%;
+    display: flex;
+    padding: 20px;
+
+
+}
+
+.section-3_ii{
+    width: 60%;
+    height: 90%;
+    border-radius: 10px;
+    display: flex;
+    padding:10px;
+    background-image: url(subpics.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+.section1-i{
+    width: 80%;
+    height: 40%;
+    display: flex;
+    gap: 10px;
+    background-color: rgba(244, 233, 233, 0.833);
+    background-color: rgba(250, 248, 248, 0.833);
+    border-radius: 20px;
+    padding: 15px;
+
+}
+
+.section1-A{
+    width: 50%;
+    height: 100px;
+    border-radius: 10px;
+    background-image: url(pagepic2.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.section1-B{
+    width: 50%;
+    height: 100px;
+    border-radius: 10px ;
+    background-image: url(pagepics3.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.text1-A{
+    font-weight: 900;
+    font-size: 30px;
+}
+
+.text1-B{
+    font-size: 10px;
+    margin: 5px;
+}
+
+.text2-A{
+    font-weight: 900;
+    font-size: 20px;
+}
+
+.text2-B{
+    margin: 2px;
+    font-size: 10px;
+}
+
+.text3-A{
+    font-weight: 900;
+    font-size: 20px;
+}
+
+.text3-B{
+    margin: 2px;
+    font-size: 10px;
+
+}
+
+.text4-A{
+    font-weight: 900;
+    font-size: 20px;
+}
+
+.text4-B{
+    margin: 2px;
+    font-size: 10px;
+}
+
+.section-4{
+    width: 100%;
+    height: 100px;
+    border: 2px solid red;
+    display: flex;
+    gap: 20px;
+    background-color: rgb(190, 175, 193);
+    justify-content: center;
+    
+}
+
+.text-section4{
+    padding: 5px;
+    font-size: 12px;
+    font-family: Impact, ;
+    font-weight: 700;
+    margin: 25px;
+    color: whitesmoke;
+
+}
+.section4-i{
+    width: 26%;
+    height: 100%;
+    
+}
+
+.section4-ii{
+    width: 30%;
+    height: 100%;
+    flex-direction: column;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.section4-iii{
+    width: 30%;
+    height: 100%;
+
+}
+
+.section4-ii_1{
+
+    font-size: 10px;
+    color: whitesmoke;
+    margin-top: 20px;
+
+}
+
+.section4-ii_2{
+    width: 40%;
+    height: 25px;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    margin-top:  5px;
+
+}
+
+.section4-ii_in2{
+    margin-left: 10px;
+
+}
+
+.section4-text4{
+    width: 25%;
+    height: 40px;
+    background-color: whitesmoke;
+    margin-top: 40px ;
+    border-radius: 20px;
+    margin-left: 150px;
+}
